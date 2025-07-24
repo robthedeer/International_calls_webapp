@@ -41,7 +41,7 @@
 
         header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 20px 0;
             margin-bottom: 30px;
@@ -55,6 +55,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             z-index: 10;
+            margin-bottom: 20px;
         }
 
         .logo i {
@@ -64,18 +65,22 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
         }
 
         nav a {
             color: var(--light);
             text-decoration: none;
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s;
             padding: 8px 15px;
             border-radius: 20px;
             position: relative;
+            white-space: nowrap;
         }
 
         nav a:hover, nav a.active {
@@ -98,6 +103,7 @@
             display: flex;
             gap: 15px;
             align-items: center;
+            margin-top: 15px;
         }
 
         .balance {
@@ -306,19 +312,19 @@
 
         .dial-pad {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
             margin: 30px 0;
         }
 
         .dial-btn {
             background: rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
+            border-radius: 12px;
             aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
@@ -331,19 +337,19 @@
 
         .dial-btn.call {
             background: var(--success);
-            grid-column: span 3;
+            grid-column: span 4;
             border-radius: 30px;
             aspect-ratio: auto;
-            padding: 15px;
-            font-size: 1.2rem;
+            padding: 12px;
+            font-size: 1.1rem;
             font-weight: 600;
         }
 
         .number-display {
             background: rgba(255, 255, 255, 0.08);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             text-align: center;
             letter-spacing: 2px;
             margin-bottom: 20px;
@@ -351,33 +357,33 @@
 
         .active-call {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background: rgba(46, 196, 182, 0.1);
             border-radius: 20px;
             margin-top: 20px;
         }
 
         .call-timer {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .call-controls {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 15px;
+            margin-top: 15px;
         }
 
         .call-btn {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
         }
 
@@ -450,16 +456,18 @@
             display: flex;
             gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .filter-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
-            padding: 8px 20px;
+            padding: 8px 15px;
             border-radius: 20px;
             color: white;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
 
         .filter-btn.active {
@@ -553,30 +561,118 @@
             resize: vertical;
         }
 
+        /* Mobile dropdown for country selection */
+        .mobile-country-selector {
+            display: none;
+        }
+
+        /* Layout adjustments */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .buy-number-card {
+                grid-column: 1;
+            }
+            
+            .add-minutes-card {
+                grid-column: 1;
+            }
+            
+            .make-call-card {
+                grid-column: 2;
+                grid-row: 1 / span 2;
+            }
+        }
+
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
             }
             
             nav ul {
-                gap: 10px;
+                gap: 8px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
             
+            nav a {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+            
             .user-actions {
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: center;
             }
             
             header {
-                flex-wrap: wrap;
-                gap: 15px;
+                gap: 10px;
                 justify-content: center;
             }
 
             .form-row {
                 grid-template-columns: 1fr;
+            }
+            
+            .country-grid {
+                display: none;
+            }
+            
+            .mobile-country-selector {
+                display: block;
+                margin-top: 15px;
+            }
+            
+            .dial-pad {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .dial-btn {
+                font-size: 1.3rem;
+                padding: 10px;
+            }
+            
+            .dial-btn.call {
+                grid-column: span 3;
+            }
+            
+            .country-flag {
+                font-size: 1.5rem;
+            }
+            
+            .country-name {
+                font-size: 0.8rem;
+            }
+            
+            .number-display {
+                font-size: 1.3rem;
+                padding: 12px;
+            }
+            
+            .call-timer {
+                font-size: 1.8rem;
+            }
+            
+            .call-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
+            .minutes-display {
+                font-size: 1.8rem;
+            }
+            
+            .price {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -608,8 +704,8 @@
 
         <!-- Dashboard Page -->
         <section id="dashboard" class="page active">
-            <div class="main-content">
-                <div class="card">
+            <div class="dashboard-grid">
+                <div class="card buy-number-card">
                     <div class="card-header">
                         <div class="card-title">Buy a New Number</div>
                         <div class="card-icon">
@@ -625,6 +721,19 @@
                             <option value="ca">Canada</option>
                             <option value="au">Australia</option>
                             <option value="de">Germany</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mobile-country-selector">
+                        <h3>Popular Countries</h3>
+                        <select style="width: 100%; margin-top: 10px;">
+                            <option value="">Select a country</option>
+                            <option value="us">🇺🇸 United States</option>
+                            <option value="uk">🇬🇧 United Kingdom</option>
+                            <option value="ca">🇨🇦 Canada</option>
+                            <option value="au">🇦🇺 Australia</option>
+                            <option value="de">🇩🇪 Germany</option>
+                            <option value="fr">🇫🇷 France</option>
                         </select>
                     </div>
                     
@@ -671,7 +780,7 @@
                     </button>
                 </div>
                 
-                <div class="card">
+                <div class="card add-minutes-card">
                     <div class="card-header">
                         <div class="card-title">Add Minutes</div>
                         <div class="card-icon">
@@ -734,7 +843,7 @@
                     </div>
                 </div>
                 
-                <div class="card" style="grid-column: span 2;">
+                <div class="card make-call-card">
                     <div class="card-header">
                         <div class="card-title">Make a Call</div>
                         <div class="card-icon">
