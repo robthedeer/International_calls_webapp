@@ -175,7 +175,7 @@
             background: var(--card-bg);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             border: 1px solid var(--card-border);
             margin-bottom: 25px;
@@ -185,44 +185,45 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .card-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
         }
 
         .card-icon {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: rgba(67, 97, 238, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--accent);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         select, input {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
+            border-radius: 10px;
             color: white;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         select:focus, input:focus {
@@ -232,15 +233,15 @@
 
         .country-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 12px;
+            margin-top: 18px;
         }
 
         .country-card {
             background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 12px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
@@ -248,27 +249,27 @@
 
         .country-card:hover, .country-card.selected {
             background: rgba(67, 97, 238, 0.3);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .country-flag {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
         }
 
         .country-name {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
         }
 
         .minutes-slider {
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .slider {
             -webkit-appearance: none;
             width: 100%;
-            height: 8px;
+            height: 6px;
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.1);
             outline: none;
@@ -277,8 +278,8 @@
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background: var(--accent);
             cursor: pointer;
@@ -286,48 +287,50 @@
 
         .minutes-display {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin: 20px 0;
+            margin: 15px 0;
             color: var(--accent);
         }
 
         .price {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            margin: 15px 0;
+            margin: 12px 0;
         }
 
         .call-history {
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .history-item {
             display: flex;
             justify-content: space-between;
-            padding: 15px 0;
+            padding: 14px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
         }
 
         .dial-pad {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin: 30px 0;
+            gap: 8px;
+            margin: 25px 0;
         }
 
         .dial-btn {
             background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
+            border-radius: 10px;
             aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
+            padding: 8px;
         }
 
         .dial-btn:hover {
@@ -335,36 +338,44 @@
             transform: scale(1.05);
         }
 
+        .dial-btn.special {
+            font-size: 1.2rem;
+        }
+
         .dial-btn.call {
             background: var(--success);
             grid-column: span 4;
             border-radius: 30px;
             aspect-ratio: auto;
-            padding: 12px;
+            padding: 10px;
             font-size: 1.1rem;
             font-weight: 600;
         }
 
         .number-display {
             background: rgba(255, 255, 255, 0.08);
-            padding: 15px;
-            border-radius: 15px;
-            font-size: 1.5rem;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 1.4rem;
             text-align: center;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .active-call {
             text-align: center;
-            padding: 20px;
+            padding: 18px;
             background: rgba(46, 196, 182, 0.1);
-            border-radius: 20px;
-            margin-top: 20px;
+            border-radius: 18px;
+            margin-top: 18px;
         }
 
         .call-timer {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin: 15px 0;
         }
@@ -377,13 +388,13 @@
         }
 
         .call-btn {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
         }
 
@@ -397,25 +408,26 @@
 
         .footer {
             text-align: center;
-            padding: 30px 0;
-            margin-top: 40px;
+            padding: 25px 0;
+            margin-top: 35px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
         }
 
         /* My Numbers page */
         .numbers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
         }
 
         .number-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 15px;
-            padding: 20px;
+            padding: 18px;
             transition: all 0.3s;
         }
 
@@ -428,46 +440,46 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .number-card-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
         }
 
         .number-value {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin: 10px 0;
+            margin: 8px 0;
             color: var(--accent);
         }
 
         .number-details {
             display: flex;
             justify-content: space-between;
-            margin-top: 15px;
-            font-size: 0.9rem;
+            margin-top: 12px;
+            font-size: 0.85rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
         /* Call History page */
         .history-filters {
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 18px;
             flex-wrap: wrap;
         }
 
         .filter-btn {
             background: rgba(255, 255, 255, 0.1);
             border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 7px 14px;
+            border-radius: 18px;
             color: white;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .filter-btn.active {
@@ -478,10 +490,10 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            margin-right: 10px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 8px;
         }
 
         .outgoing {
@@ -502,16 +514,16 @@
         /* Support page */
         .support-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+            margin-top: 18px;
         }
 
         .support-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 15px;
-            padding: 25px;
+            padding: 22px;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
@@ -523,41 +535,42 @@
         }
 
         .support-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 18px;
             color: var(--accent);
         }
 
         .support-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
         }
 
         .support-text {
             color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
+            line-height: 1.5;
+            font-size: 0.95rem;
         }
 
         .contact-form {
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 18px;
+            margin-bottom: 18px;
         }
 
         textarea {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             color: white;
-            font-size: 1rem;
-            min-height: 150px;
+            font-size: 0.95rem;
+            min-height: 140px;
             resize: vertical;
         }
 
@@ -571,6 +584,10 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
+        }
+
+        .make-call-card {
+            padding: 20px;
         }
 
         @media (min-width: 768px) {
@@ -636,8 +653,8 @@
             }
             
             .dial-btn {
-                font-size: 1.3rem;
-                padding: 10px;
+                font-size: 1.2rem;
+                padding: 8px;
             }
             
             .dial-btn.call {
@@ -645,7 +662,7 @@
             }
             
             .country-flag {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
             
             .country-name {
@@ -653,26 +670,31 @@
             }
             
             .number-display {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 padding: 12px;
+                height: 55px;
             }
             
             .call-timer {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .call-btn {
-                width: 45px;
-                height: 45px;
+                width: 42px;
+                height: 42px;
                 font-size: 1.1rem;
             }
             
             .minutes-display {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .price {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+            
+            .card {
+                padding: 20px;
             }
         }
     </style>
@@ -721,6 +743,21 @@
                             <option value="ca">Canada</option>
                             <option value="au">Australia</option>
                             <option value="de">Germany</option>
+                            <option value="fr">France</option>
+                            <option value="it">Italy</option>
+                            <option value="es">Spain</option>
+                            <option value="jp">Japan</option>
+                            <option value="cn">China</option>
+                            <option value="in">India</option>
+                            <option value="br">Brazil</option>
+                            <option value="mx">Mexico</option>
+                            <option value="ru">Russia</option>
+                            <option value="kr">South Korea</option>
+                            <option value="za">South Africa</option>
+                            <option value="zw">Zimbabwe</option>
+                            <option value="zm">Zambia</option>
+                            <option value="mz">Mozambique</option>
+                            <option value="bw">Botswana</option>
                         </select>
                     </div>
                     
@@ -730,10 +767,11 @@
                             <option value="">Select a country</option>
                             <option value="us">🇺🇸 United States</option>
                             <option value="uk">🇬🇧 United Kingdom</option>
-                            <option value="ca">🇨🇦 Canada</option>
-                            <option value="au">🇦🇺 Australia</option>
-                            <option value="de">🇩🇪 Germany</option>
-                            <option value="fr">🇫🇷 France</option>
+                            <option value="za">🇿🇦 South Africa</option>
+                            <option value="zw">🇿🇼 Zimbabwe</option>
+                            <option value="zm">🇿🇲 Zambia</option>
+                            <option value="mz">🇲🇿 Mozambique</option>
+                            <option value="bw">🇧🇼 Botswana</option>
                         </select>
                     </div>
                     
@@ -741,41 +779,45 @@
                         <h3>Popular Countries</h3>
                         <div class="country-grid">
                             <div class="country-card selected">
-                                <div class="country-flag">🇺🇸</div>
-                                <div class="country-name">USA</div>
-                            </div>
-                            <div class="country-card">
                                 <div class="country-flag">🇬🇧</div>
                                 <div class="country-name">UK</div>
                             </div>
                             <div class="country-card">
-                                <div class="country-flag">🇨🇦</div>
-                                <div class="country-name">Canada</div>
+                                <div class="country-flag">🇺🇸</div>
+                                <div class="country-name">USA</div>
                             </div>
                             <div class="country-card">
-                                <div class="country-flag">🇦🇺</div>
-                                <div class="country-name">Australia</div>
+                                <div class="country-flag">🇿🇦</div>
+                                <div class="country-name">South Africa</div>
                             </div>
                             <div class="country-card">
-                                <div class="country-flag">🇩🇪</div>
-                                <div class="country-name">Germany</div>
+                                <div class="country-flag">🇿🇼</div>
+                                <div class="country-name">Zimbabwe</div>
                             </div>
                             <div class="country-card">
-                                <div class="country-flag">🇫🇷</div>
-                                <div class="country-name">France</div>
+                                <div class="country-flag">🇿🇲</div>
+                                <div class="country-name">Zambia</div>
+                            </div>
+                            <div class="country-card">
+                                <div class="country-flag">🇲🇿</div>
+                                <div class="country-name">Mozambique</div>
+                            </div>
+                            <div class="country-card">
+                                <div class="country-flag">🇧🇼</div>
+                                <div class="country-name">Botswana</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>Number Type</label>
-                        <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <div style="display: flex; gap: 12px; margin-top: 10px;">
                             <button class="btn" style="flex:1;">Local</button>
                             <button class="btn btn-primary" style="flex:1;">Toll-Free</button>
                         </div>
                     </div>
                     
-                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 18px;">
                         <i class="fas fa-shopping-cart"></i> Buy Number ($4.99/month)
                     </button>
                 </div>
@@ -857,6 +899,8 @@
                     </div>
                     
                     <div class="dial-pad">
+                        <div class="dial-btn special">+</div>
+                        <div class="dial-btn special"><i class="fas fa-backspace"></i></div>
                         <div class="dial-btn">1</div>
                         <div class="dial-btn">2</div>
                         <div class="dial-btn">3</div>
@@ -956,28 +1000,28 @@
                     </div>
                 </div>
                 
-                <div style="display: flex; justify-content: space-around; margin: 30px 0;">
+                <div style="display: flex; justify-content: space-around; margin: 25px 0;">
                     <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-weight: 700;">23</div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">23</div>
                         <div>Active Calls</div>
                     </div>
                     <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-weight: 700;">1,254</div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">1,254</div>
                         <div>Total Minutes</div>
                     </div>
                     <div style="text-align: center;">
-                        <div style="font-size: 2rem; font-weight: 700;">89</div>
+                        <div style="font-size: 1.8rem; font-weight: 700;">89</div>
                         <div>Countries Called</div>
                     </div>
                 </div>
                 
-                <div style="background: rgba(255,255,255,0.08); height: 200px; border-radius: 15px; display: flex; align-items: flex-end; padding: 15px; gap: 10px;">
-                    <div style="flex: 1; background: var(--accent); height: 70%; border-radius: 8px;"></div>
-                    <div style="flex: 1; background: var(--accent); height: 40%; border-radius: 8px;"></div>
-                    <div style="flex: 1; background: var(--accent); height: 85%; border-radius: 8px;"></div>
-                    <div style="flex: 1; background: var(--accent); height: 60%; border-radius: 8px;"></div>
-                    <div style="flex: 1; background: var(--accent); height: 30%; border-radius: 8px;"></div>
-                    <div style="flex: 1; background: var(--accent); height: 95%; border-radius: 8px;"></div>
+                <div style="background: rgba(255,255,255,0.08); height: 180px; border-radius: 12px; display: flex; align-items: flex-end; padding: 12px; gap: 8px;">
+                    <div style="flex: 1; background: var(--accent); height: 70%; border-radius: 6px;"></div>
+                    <div style="flex: 1; background: var(--accent); height: 40%; border-radius: 6px;"></div>
+                    <div style="flex: 1; background: var(--accent); height: 85%; border-radius: 6px;"></div>
+                    <div style="flex: 1; background: var(--accent); height: 60%; border-radius: 6px;"></div>
+                    <div style="flex: 1; background: var(--accent); height: 30%; border-radius: 6px;"></div>
+                    <div style="flex: 1; background: var(--accent); height: 95%; border-radius: 6px;"></div>
                 </div>
             </div>
         </section>
@@ -1086,7 +1130,7 @@
                     </div>
                 </div>
                 
-                <button class="btn" style="width: 100%; margin-top: 20px;">
+                <button class="btn" style="width: 100%; margin-top: 18px;">
                     <i class="fas fa-download"></i> Export Call History
                 </button>
             </div>
@@ -1135,7 +1179,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3 style="margin-bottom: 20px;">Contact Support</h3>
+                    <h3 style="margin-bottom: 18px;">Contact Support</h3>
                     <div class="form-row">
                         <div class="form-group">
                             <label>Your Name</label>
@@ -1171,7 +1215,7 @@
                     </div>
                 </div>
                 
-                <div style="line-height: 2.5;">
+                <div style="line-height: 2.3;">
                     <div><i class="fas fa-file-pdf" style="color: var(--accent); margin-right: 10px;"></i> User Manual</div>
                     <div><i class="fas fa-file-audio" style="color: var(--accent); margin-right: 10px;"></i> Setup Instructions</div>
                     <div><i class="fas fa-video" style="color: var(--accent); margin-right: 10px;"></i> Video Tutorials</div>
@@ -1179,9 +1223,9 @@
                     <div><i class="fas fa-comments" style="color: var(--accent); margin-right: 10px;"></i> Community Forum</div>
                 </div>
                 
-                <div style="margin-top: 30px; background: rgba(255,255,255,0.08); padding: 20px; border-radius: 15px;">
-                    <h3 style="margin-bottom: 15px;">Live Support Availability</h3>
-                    <div style="line-height: 2;">
+                <div style="margin-top: 25px; background: rgba(255,255,255,0.08); padding: 18px; border-radius: 12px;">
+                    <h3 style="margin-bottom: 12px;">Live Support Availability</h3>
+                    <div style="line-height: 1.8;">
                         <div><i class="fas fa-clock" style="margin-right: 10px;"></i> Monday-Friday: 8AM - 10PM (GMT)</div>
                         <div><i class="fas fa-clock" style="margin-right: 10px;"></i> Saturday-Sunday: 9AM - 6PM (GMT)</div>
                         <div><i class="fas fa-phone" style="margin-right: 10px;"></i> +1 (800) 123-4567</div>
@@ -1259,7 +1303,24 @@
         if (dialButtons.length > 0) {
             dialButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    if (numberDisplay.textContent === '+1 234 567 890') {
+                    const currentText = numberDisplay.textContent;
+                    
+                    // Handle delete button
+                    if (this.querySelector('.fa-backspace')) {
+                        numberDisplay.textContent = currentText.slice(0, -1);
+                        return;
+                    }
+                    
+                    // Handle plus button
+                    if (this.textContent === '+') {
+                        if (!currentText.startsWith('+')) {
+                            numberDisplay.textContent = '+' + currentText;
+                        }
+                        return;
+                    }
+                    
+                    // Handle other buttons
+                    if (currentText === '+1 234 567 890' || currentText === '') {
                         numberDisplay.textContent = this.textContent;
                     } else {
                         numberDisplay.textContent += this.textContent;
